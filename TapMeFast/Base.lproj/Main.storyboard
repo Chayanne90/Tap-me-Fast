@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BADABB__.TTF">
+            <string>BadaBoomBB</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapMeFast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,135 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="emx-it-XAK">
+                                <rect key="frame" x="0.0" y="-3" width="375" height="673"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tap Me Fast" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1m-Sz-3lX">
+                                <rect key="frame" x="16" y="28" width="343" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="189" id="P7t-5A-Zdb"/>
+                                    <constraint firstAttribute="height" constant="189" id="nus-to-sLR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BadaBoomBB" family="BadaBoom BB" pointSize="86"/>
+                                <color key="textColor" red="1" green="0.062283811947476675" blue="0.43650392962115558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ky8-eU-ncI">
+                                <rect key="frame" x="16" y="580" width="343" height="67"/>
+                                <color key="backgroundColor" red="1" green="0.062283811947476675" blue="0.43650392962115558" alpha="0.70318001760563376" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="BadaBoomBB" family="BadaBoom BB" pointSize="51"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" red="0.9760902441" green="1" blue="0.99746916839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Awv-Ke-XYV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-K6-qUb">
+                                <rect key="frame" x="16" y="405" width="343" height="151"/>
+                                <color key="backgroundColor" red="1" green="0.062283811947476675" blue="0.43650392962115558" alpha="0.6960002200704225" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="779-XS-ass"/>
+                                    <constraint firstAttribute="height" constant="151" id="EF7-g1-JAY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="151" id="XmS-1a-7Z8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BadaBoomBB" family="BadaBoom BB" pointSize="51"/>
+                                <state key="normal" title="Tap me">
+                                    <color key="titleColor" red="0.9760902441" green="1" blue="0.99746916839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yCb-mI-cDT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnA-k6-XNU">
+                                <rect key="frame" x="16" y="225" width="343" height="71"/>
+                                <color key="backgroundColor" red="0.9760902441" green="1" blue="0.99746916839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="9y1-Ng-8BQ"/>
+                                    <constraint firstAttribute="width" constant="343" id="BaB-Ts-92i"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="GBN-vN-vep"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="71" id="uwl-6l-TZ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BadaBoomBB" family="BadaBoom BB" pointSize="40"/>
+                                <color key="textColor" red="0.42468999239999999" green="0.42468999239999999" blue="0.42468999239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvc-aT-Jlk">
+                                <rect key="frame" x="16" y="304" width="343" height="71"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="gOk-vZ-vcI"/>
+                                    <constraint firstAttribute="width" constant="343" id="pV2-1G-kmH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BadaBoomBB" family="BadaBoom BB" pointSize="40"/>
+                                <color key="textColor" red="0.42468999239999999" green="0.42468999239999999" blue="0.42468999239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="top" secondItem="b1m-Sz-3lX" secondAttribute="bottom" constant="8" id="19U-xU-xtY"/>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2dI-Kf-Csu"/>
+                            <constraint firstAttribute="trailing" secondItem="emx-it-XAK" secondAttribute="trailing" id="2jF-Vl-ikc"/>
+                            <constraint firstAttribute="bottom" secondItem="emx-it-XAK" secondAttribute="bottom" constant="-3" id="3EK-YG-Drv"/>
+                            <constraint firstItem="zvc-aT-Jlk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3cp-sL-gdz"/>
+                            <constraint firstItem="zvc-aT-Jlk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6AY-Th-Dmz"/>
+                            <constraint firstItem="b1m-Sz-3lX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="6uw-zg-6Xf"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="top" secondItem="bTL-K6-qUb" secondAttribute="bottom" constant="24" id="6ya-24-2dZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ky8-eU-ncI" secondAttribute="bottom" constant="20" id="7Df-mn-48F"/>
+                            <constraint firstItem="zvc-aT-Jlk" firstAttribute="top" secondItem="RnA-k6-XNU" secondAttribute="bottom" constant="8" id="7Ve-oC-OVJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ky8-eU-ncI" secondAttribute="bottom" constant="20" id="7bd-4D-rpr"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7t0-fD-6Gg"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="top" secondItem="bTL-K6-qUb" secondAttribute="bottom" constant="8" id="92I-op-dKd"/>
+                            <constraint firstItem="zvc-aT-Jlk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AW0-xr-wsf"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="C3D-bO-pcY"/>
+                            <constraint firstItem="b1m-Sz-3lX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="C4g-H3-Ket"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="D0s-vw-xFZ"/>
+                            <constraint firstItem="b1m-Sz-3lX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eje-I3-ZXd"/>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FDu-Li-FNZ"/>
+                            <constraint firstItem="b1m-Sz-3lX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="HCE-4z-WCb"/>
+                            <constraint firstItem="emx-it-XAK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hvg-XX-b8H"/>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="IRE-tr-nZq"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="top" secondItem="bTL-K6-qUb" secondAttribute="bottom" constant="24" id="Jg4-Lb-XZs"/>
+                            <constraint firstItem="emx-it-XAK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-3" id="LXQ-Gz-udB"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MD9-aS-wx0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ky8-eU-ncI" secondAttribute="bottom" constant="20" id="Mbx-yX-oCR"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="top" secondItem="bTL-K6-qUb" secondAttribute="bottom" constant="24" id="NjY-oN-llg"/>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="top" secondItem="b1m-Sz-3lX" secondAttribute="bottom" constant="8" id="R2L-My-bhr"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XFm-Je-cpW"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="top" secondItem="zvc-aT-Jlk" secondAttribute="bottom" constant="34" id="XOa-pd-gqu"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZWe-a2-DJG"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="chy-YD-jW8"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d3R-0O-Tpm"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iwd-ar-avR"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kjp-Ii-X9n"/>
+                            <constraint firstItem="zvc-aT-Jlk" firstAttribute="top" secondItem="RnA-k6-XNU" secondAttribute="bottom" constant="8" id="la8-2A-wnz"/>
+                            <constraint firstItem="b1m-Sz-3lX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="m8y-13-0KR"/>
+                            <constraint firstItem="b1m-Sz-3lX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mP4-eN-ttS"/>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mkM-Zv-379"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="top" secondItem="bTL-K6-qUb" secondAttribute="bottom" constant="24" id="mml-UT-K0F"/>
+                            <constraint firstItem="ky8-eU-ncI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ndv-VX-KNq"/>
+                            <constraint firstItem="zvc-aT-Jlk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rf1-2C-XIC"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uTu-fx-d3d"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="top" secondItem="zvc-aT-Jlk" secondAttribute="bottom" constant="30" id="uye-Sq-Gcw"/>
+                            <constraint firstItem="RnA-k6-XNU" firstAttribute="top" secondItem="b1m-Sz-3lX" secondAttribute="bottom" constant="8" id="vFM-5O-rdi"/>
+                            <constraint firstItem="bTL-K6-qUb" firstAttribute="top" secondItem="zvc-aT-Jlk" secondAttribute="bottom" constant="114" id="xzO-Lu-XyH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="StartGame" destination="ky8-eU-ncI" id="xk3-Pz-HMR"/>
+                        <outlet property="TapMeBtn" destination="bTL-K6-qUb" id="SIY-P6-atj"/>
+                        <outlet property="scoreLabel" destination="zvc-aT-Jlk" id="iVU-1H-CC6"/>
+                        <outlet property="timeLabel1" destination="RnA-k6-XNU" id="zuN-42-O9B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bubbles" width="1920" height="1200"/>
+    </resources>
 </document>
